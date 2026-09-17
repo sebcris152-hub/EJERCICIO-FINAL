@@ -1,0 +1,256 @@
+=========================================================
+                    README.TXT
+=========================================================
+
+NOMBRE DEL PROYECTO
+---------------------------------------------------------
+SNAKEBYTE - Ofertas y Comunidad Gamer
+
+AUTOR
+---------------------------------------------------------
+Nombre: Juan Sebastián Cristancho
+Fecha de elaboración:
+17 de septiembre de 2026
+
+Institución:
+SENA
+
+Programa de formación:
+Tecnólogo en Análisis y Desarrollo de Software (ADSO)
+
+=========================================================
+DESCRIPCIÓN DEL PROYECTO
+=========================================================
+
+SNAKEBYTE es una página web de temática gamer desarrollada como proyecto
+formativo del programa Tecnólogo en Análisis y Desarrollo de Software (ADSO).
+
+El sitio está diseñado para presentar contenido relacionado con videojuegos,
+ofertas de Steam, juegos destacados y títulos más jugados. La información se
+organiza mediante una interfaz visual moderna, utilizando una temática oscura
+con elementos de estilo neón para generar una experiencia relacionada con el
+mundo gaming.
+
+La página también cuenta con un carrusel de contenido destacado, tarjetas de
+videojuegos, estadísticas, enlaces hacia Steam y un formulario de inicio de
+sesión presentado mediante una ventana modal.
+
+=========================================================
+OBJETIVO DEL PROYECTO
+=========================================================
+
+El objetivo principal del proyecto es aplicar los conocimientos adquiridos
+durante la formación en desarrollo web mediante la creación de una interfaz
+funcional y organizada utilizando HTML5, CSS3 y JavaScript.
+
+También se busca fortalecer el manejo de estructuras HTML, estilos
+personalizados, diseño responsivo, programación mediante JavaScript,
+componentes de Bootstrap y buenas prácticas relacionadas con accesibilidad y
+seguridad en enlaces externos.
+
+=========================================================
+TECNOLOGÍAS UTILIZADAS
+=========================================================
+
+- HTML5
+  Se utilizó para construir la estructura principal de la página, incluyendo
+  la barra de navegación, contenido principal, secciones, formularios,
+  carrusel, tarjetas y pie de página.
+
+- CSS3
+  Se utilizó para personalizar la apariencia del sitio. Incluye variables
+  CSS, colores, tipografías, bordes, sombras, animaciones, transiciones,
+  diseño responsivo y estilos para los diferentes componentes.
+
+- JavaScript
+  Se utilizó para agregar interactividad al proyecto, controlar el carrusel,
+  cambiar automáticamente las diapositivas y generar dinámicamente las
+  tarjetas de videojuegos y sus estadísticas.
+
+- Bootstrap 5
+  Se utilizó para facilitar el diseño responsivo y la construcción de
+  componentes como la barra de navegación, columnas, botones y ventana modal.
+
+- Font Awesome
+  Se utilizó para incorporar iconos relacionados con la interfaz y la
+  temática gamer.
+
+- Google Fonts
+  Se utilizaron las fuentes Orbitron y Rajdhani para complementar el diseño
+  visual de la página.
+
+=========================================================
+ESTRUCTURA DEL PROYECTO
+=========================================================
+
+El proyecto está compuesto principalmente por los siguientes archivos:
+
+index.html
+- Contiene la estructura principal de la página web.
+- Incluye la navegación, carrusel, secciones de ofertas, juegos más jugados,
+  modal de inicio de sesión y pie de página.
+- También contiene el código JavaScript utilizado por la página.
+
+estuco.css
+- Contiene los estilos principales del proyecto.
+- Define colores, fuentes, tarjetas, carrusel, botones, formularios,
+  animaciones y reglas para dispositivos móviles y tablets.
+
+README.txt
+- Documento que contiene la información general, descripción, tecnologías,
+  funcionalidades y forma de ejecución del proyecto.
+
+=========================================================
+FUNCIONALIDADES
+=========================================================
+
+• Barra de navegación con acceso a las diferentes secciones.
+• Carrusel de imágenes y contenido destacado.
+• Cambio manual de diapositivas mediante botones.
+• Cambio automático de diapositivas cada cuatro segundos.
+• Sección de ofertas destacadas en Steam.
+• Tarjetas de videojuegos generadas mediante JavaScript.
+• Información de descuentos y precios.
+• Enlaces externos hacia las páginas de los videojuegos en Steam.
+• Sección de juegos más jugados.
+• Visualización de jugadores activos.
+• Barras de estadísticas para representar información de los juegos.
+• Ventana modal para inicio de sesión.
+• Validación básica de los campos del formulario.
+• Diseño adaptable para computadores, tablets y celulares.
+• Uso de iconos y tipografías externas.
+• Estados de enfoque visibles para mejorar la accesibilidad.
+
+=========================================================
+CONTENIDO PRINCIPAL
+=========================================================
+
+CARRUSEL
+---------------------------------------------------------
+El carrusel presenta tres contenidos principales:
+
+1. Nuevos lanzamientos 2026.
+2. Torneos esports en vivo.
+3. Oferta de temporada en Steam.
+
+OFERTAS STEAM
+---------------------------------------------------------
+La sección de ofertas incluye los siguientes videojuegos:
+
+- Counter-Strike 2
+- Dota 2 - Pack Battle
+- Cyberpunk 2077
+- Grand Theft Auto V
+
+Cada tarjeta presenta una imagen, descuento, precio y un botón que permite
+acceder a Steam.
+
+JUEGOS MÁS JUGADOS
+---------------------------------------------------------
+La sección de juegos más jugados presenta:
+
+- PUBG: BATTLEGROUNDS
+- Apex Legends
+- HELLDIVERS™ 2
+
+Cada videojuego muestra una cantidad de jugadores activos, una barra de
+estadísticas y un enlace relacionado con Steam.
+
+=========================================================
+DISEÑO VISUAL
+=========================================================
+
+El proyecto utiliza una temática gamer con un diseño oscuro y elementos
+neón.
+
+Los principales elementos visuales incluyen:
+
+- Fondo oscuro.
+- Verde neón.
+- Morado neón.
+- Blanco y gris para los textos.
+- Azul utilizado en elementos relacionados con Steam.
+- Sombras y efectos de iluminación.
+- Bordes redondeados.
+- Animaciones y transiciones.
+
+El archivo CSS utiliza variables para facilitar la organización y
+modificación de los colores, fuentes, bordes y transiciones.
+
+=========================================================
+ACCESIBILIDAD Y SEGURIDAD
+=========================================================
+
+El proyecto incluye diferentes elementos orientados a mejorar la calidad
+del sitio web:
+
+- Uso de atributos alt en las imágenes.
+- Uso de etiquetas label asociadas correctamente con los campos del
+  formulario.
+- Uso de aria-label en los botones del carrusel.
+- Uso de estructura semántica HTML5.
+- Estados de enfoque visibles para elementos interactivos.
+- Uso de rel="noopener noreferrer" en enlaces externos que se abren en
+  una nueva pestaña.
+
+Estas características permiten mejorar la navegación, accesibilidad y
+seguridad básica de la página.
+
+=========================================================
+REQUISITOS PARA EJECUTAR EL PROYECTO
+=========================================================
+
+Para visualizar correctamente el proyecto se necesita:
+
+- Un computador o dispositivo compatible.
+- Un navegador web actualizado.
+- Los archivos index.html y estuco.css dentro de la misma carpeta.
+- Conexión a Internet para cargar los recursos externos utilizados por
+  la página.
+
+No es necesario instalar un servidor o una base de datos para visualizar
+la versión actual del proyecto.
+
+=========================================================
+INSTRUCCIONES DE USO
+=========================================================
+
+1. Descargar o copiar los archivos del proyecto.
+2. Colocar index.html y estuco.css dentro de la misma carpeta.
+3. Abrir la carpeta del proyecto.
+4. Localizar el archivo "index.html".
+5. Abrir "index.html" utilizando un navegador web.
+6. Navegar por las diferentes secciones de SNAKEBYTE.
+7. Utilizar los botones del carrusel para cambiar las diapositivas.
+8. Revisar las tarjetas de videojuegos y utilizar los botones de Steam
+   para acceder a sus páginas correspondientes.
+
+=========================================================
+OBSERVACIONES
+=========================================================
+
+Este proyecto fue desarrollado con fines académicos como parte de la
+formación en el SENA.
+
+Los precios, descuentos y cantidades de jugadores incluidos en el código
+son datos establecidos dentro del proyecto y no corresponden
+necesariamente a información actualizada en tiempo real.
+
+El formulario de inicio de sesión corresponde a una demostración de
+interfaz. En la versión actual no existe una autenticación real mediante
+base de datos o servidor.
+
+=========================================================
+CONCLUSIÓN
+=========================================================
+
+SNAKEBYTE permite demostrar la aplicación de conocimientos básicos de
+desarrollo web mediante la integración de HTML5, CSS3 y JavaScript.
+
+El proyecto combina estructura, diseño, interactividad, componentes
+responsivos y elementos de accesibilidad para construir una página web
+relacionada con la temática de videojuegos.
+
+=========================================================
+FIN DEL DOCUMENTO
+=========================================================

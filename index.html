@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SNAKEBYTE — tienda gamer con ofertas Steam, torneos esports y los títulos más jugados del momento." />
+    <title>SNAKEBYTE | Ofertas y comunidad gamer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Rajdhani:wght@500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="estuco.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <!-- FIX: "navbar-dark" estaba en el botón, no en el <nav>. Bootstrap busca
+         .navbar-dark en el ancestro .navbar para pintar el icono del toggler
+         en blanco; al estar mal ubicado, el icono quedaba invisible sobre
+         fondo oscuro en móvil. -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="brand-logo" href="#">
+                <div class="logo-icon-container">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                    <i class="fa-solid fa-worm"></i>
+                </div>
+                <span class="brand-text">SNAKEBYTE</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-4">
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="#carrusel">Destacados</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="#ofertas">Ofertas Steam</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fw-bold" href="#mas-jugados">Top Jugados</a></li>
+                </ul>
+                <!-- BOTÓN INICIO DE SESIÓN -->
+                <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fa-solid fa-user-ninja me-2"></i>Iniciar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FIX: se agrega <main> para envolver el contenido principal (HTML5 semántico, criterio 1) -->
+    <main>
+        <div class="container" id="carrusel">
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Diapositiva anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Siguiente diapositiva"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="custom-carousel" id="jsCarousel">
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Cyberpunk Setup" />
+                        <div class="carousel-caption-custom">
+                            <h2>¡NUEVOS LANZAMIENTOS 2026!</h2>
+                            <p>Explora los títulos más esperados del año con gráficos de última generación.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Gaming Zone" />
+                        <div class="carousel-caption-custom">
+                            <h2>TORNEOS ESPORTS EN VIVO</h2>
+                            <p>Únete a las ligas de competencia semanal y gana premios increíbles.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Arcade Controller" />
+                        <div class="carousel-caption-custom">
+                            <h2>OFERTA DE TEMPORADA EN STEAM</h2>
+                            <p>Descuentos de hasta un 85% en tus juegos de acción y RPG favoritos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container my-5" id="ofertas">
+            <h2 class="text-center mb-4 text-uppercase" style="color: var(--primary-neon);">
+                <i class="fa-solid fa-tags me-2"></i>Ofertas Destacadas en Steam
+            </h2>
+            <div class="row g-4" id="offersContainer">
+            </div>
+        </section>
+
+        <section class="container my-5" id="mas-jugados">
+            <h2 class="text-center mb-4 text-uppercase" style="color: var(--secondary-neon);">
+                <i class="fa-solid fa-fire me-2"></i>Más Jugados de los Últimos Meses
+            </h2>
+            <div class="row g-4" id="mostPlayedContainer">
+            </div>
+        </section>
+    </main>
+
+<footer class="text-center py-4">
+    <p>
+        SNAKEBYTE &copy; 2026 — Proyecto formativo Tecnólogo ADSO
+    </p>
+
+
+    <!-- MODAL DE INICIO DE SESIÓN -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background: var(--card-bg); border: 2px solid var(--primary-neon); color: white;">
+                <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <h5 class="modal-title font-orbitron">Acceso Gamer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- FIX: los <label> no estaban vinculados a su input (accesibilidad,
+                         criterio 20). Se agregan id/for para que los lectores de pantalla
+                         asocien correctamente cada campo con su etiqueta. -->
+                    <form onsubmit="event.preventDefault(); alert('¡Inicio de sesión exitoso!');">
+                        <div class="mb-3">
+                            <label class="form-label" for="loginUser">Usuario / Email</label>
+                            <input type="text" id="loginUser" name="loginUser" class="form-control bg-dark text-light border-secondary" placeholder="Gamer123" required="required" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="loginPass">Contraseña</label>
+                            <input type="password" id="loginPass" name="loginPass" class="form-control bg-dark text-light border-secondary" placeholder="••••••••" required="required" />
+                        </div>
+                        <button type="submit" class="btn btn-login w-100 mt-3">ENTRAR AL PORTAL</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CÓDIGO JAVASCRIPT PERSONALIZADO -->
+    <script>
+        // --- 1. LÓGICA DEL CARRUSEL EN JS ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            document.getElementById('jsCarousel').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Auto-reproducción del carrusel cada 4 segundos
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+
+        // --- 2. DATOS Y CARGA DE OFERTAS (STEAM) ---
+        const steamOffers = [
+            {
+                title: "Counter-Strike 2",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg",
+                discount: "-80%",
+                price: "$4.99 USD",
+                steamUrl: "https://store.steampowered.com/app/730/CounterStrike_2/"
+            },
+            {
+                title: "Dota 2 - Pack Battle",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg",
+                discount: "-50%",
+                price: "$9.99 USD",
+                steamUrl: "https://store.steampowered.com/app/570/Dota_2/"
+            },
+            {
+                title: "Cyberpunk 2077",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg",
+                discount: "-60%",
+                price: "$23.99 USD",
+                steamUrl: "https://store.steampowered.com/app/1091500/Cyberpunk_2077/"
+            },
+            {
+                title: "Grand Theft Auto V",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg",
+                discount: "-67%",
+                price: "$14.99 USD",
+                steamUrl: "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/"
+            }
+        ];
+
+        const offersContainer = document.getElementById('offersContainer');
+        steamOffers.forEach(game => {
+            // FIX: target="_blank" sin rel="noopener noreferrer" deja la pestaña
+            // nueva con acceso a window.opener (riesgo de seguridad/rendimiento).
+            offersContainer.innerHTML += `
+                <div class="col-md-6 col-lg-3">
+                    <div class="game-card">
+                        <img src="${game.image}" alt="${game.title}" loading="lazy" />
+                        <div class="p-3">
+                            <h5 class="fw-bold text-truncate">${game.title}</h5>
+                            <div class="d-flex justify-content-between align-items-center my-3">
+                                <span class="badge-discount">${game.discount}</span>
+                                <span class="fs-5 fw-bold text-success">${game.price}</span>
+                            </div>
+                            <a href="${game.steamUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-steam">
+                                <i class="fa-brands fa-steam me-2"></i>Ver en Steam
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // --- 3. DATOS Y ESTADÍSTICAS DE JUEGOS MÁS JUGADOS ---
+        const mostPlayedGames = [
+            {
+                title: "PUBG: BATTLEGROUNDS",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/578080/header.jpg",
+                activePlayers: "620,000",
+                peakRatio: 85, // Porcentaje para la barra de estadísticas
+                steamUrl: "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/"
+            },
+            {
+                title: "Apex Legends",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/1172470/header.jpg",
+                activePlayers: "340,000",
+                peakRatio: 68,
+                steamUrl: "https://store.steampowered.com/app/1172470/Apex_Legends/"
+            },
+            {
+                title: "HELLDIVERS™ 2",
+                image: "https://cdn.akamai.steamstatic.com/steam/apps/553850/header.jpg",
+                activePlayers: "450,000",
+                peakRatio: 75,
+                steamUrl: "https://store.steampowered.com/app/553850/HELLDIVERS_2/"
+            }
+        ];
+
+        const mostPlayedContainer = document.getElementById('mostPlayedContainer');
+        mostPlayedGames.forEach(game => {
+            mostPlayedContainer.innerHTML += `
+                <div class="col-md-4">
+                    <div class="game-card p-3">
+                        <img src="${game.image}" class="rounded mb-3" alt="${game.title}" loading="lazy" />
+                        <h4 class="h5 fw-bold">${game.title}</h4>
+
+                        <div class="my-3">
+                            <div class="d-flex justify-content-between text-muted small">
+                                <span>Jugadores Activos</span>
+                                <span class="text-warning fw-bold">${game.activePlayers}</span>
+                            </div>
+                            <!-- Barra de Estadística -->
+                            <div class="stat-bar-container" role="img" aria-label="${game.activePlayers} jugadores activos, ${game.peakRatio}% del pico histórico">
+                                <div class="stat-bar" style="width: ${game.peakRatio}%;"></div>
+                            </div>
+                        </div>
+
+                        <a href="${game.steamUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-steam mt-2">
+                            <i class="fa-brands fa-steam me-2"></i>Comprar / Jugar
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
